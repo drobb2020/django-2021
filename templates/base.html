@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>devSearch | {% block title %}{% endblock title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="David Robb" />
+    <meta name="description" content="Dennis Ivy - Django 2021 Udemy Course" />
+    <meta property="og:image" content="./assets/logo.png" />
+    <meta
+      property="og:description"
+      content="Dennis Ivy - Django 2021 Udemy Course"
+    />
+    <meta property="og:title" content="Dennis Ivy - Django 2021 Udemy Course" />
+    <meta name="twitter:title" content="devSearch" />
+    <link rel="icon" href="{% static 'assets/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <script src="{% static 'js/main.js' %}" defer></script>
+  </head>
+  <body>
+    {% include "partials/navbar.html" %}
+    {% block content %}
+
+    {% endblock content %}
+    {% include "partials/footer.html" %}
+  </body>
+</html>

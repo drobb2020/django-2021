@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+
+{% block title %}Projects{% endblock title %}
+
+{% block content %}
+<!-- Main Section -->
+<main class="projects">
+  <section class="hero-section text-center">
+    <div class="container container--narrow">
+      <div class="hero-section__box">
+        <h2>Search for <span>Projects</span></h2>
+      </div>
+      <div class="hero-section__search">
+        <form
+          id="searchForm"
+          class="form"
+          action="{% url 'projects' %}"
+          method="get"
+        >
+          <div class="form__field">
+            <label for="formInput#search">Search By Projects </label>
+            <input
+              class="input input--text"
+              id="formInput#search"
+              type="text"
+              name="search_query"
+              placeholder="Search by Project Title"
+              value="{{search_query}}"
+            />
+          </div>
+          <input class="btn btn--sub btn--lg" type="submit" value="Search" />
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<h1>Projects</h1>
+<table>
+  <tr>
+    <th>Project</th>
+    <th>Votes</th>
+    <th>Positive Votes</th>
+    <th>Created On</th>
+    <th>Last Updated</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  {% for project in projects %}
+  <tr>
+    <td>{{ project.title }}</td>
+    <td>{{ project.vote_total }}</td>
+    <td>{{ project.vote_ratio }}%</td>
+    <td>{{ project.created_at }}</td>
+    <td>{{ project.updated_at }}</td>
+    <td><a href="{% url 'update-project' project.id %}">Edit</a></td>
+    <td><a href="{% url 'delete-project' project.id %}">Delete</a></td>
+    <td><a href="{% url 'project' project.id %}">View</a></td>
+  </tr>
+  {% endfor %}
+</table>
+{% endblock content %}

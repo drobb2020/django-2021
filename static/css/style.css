@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+h1 {
+  color: purple;
+  font-size: 5rem;
+}
+
+p {
+  color: blue;
+  font-size: 1.5rem;
+}

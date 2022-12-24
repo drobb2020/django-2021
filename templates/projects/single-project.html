@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.title }}{% endblock title %}
+
+{% block content %}
+<img style="max-width: 500px;" src="{{ project.featured_image.url }}" alt="{{ project.title }}">
+<h1>{{ project.title }}</h1>
+<hr />
+{% for tag in project.tags.all %}
+  <span style="border: 1px solid grey;">{{ tag }}</span>
+{% endfor %}
+<hr />
+<br />
+<p>{{ project.description }}</p>
+<hr />
+<a href="{% url 'projects' %}"><- Go Back</a>
+{% endblock content %}
