@@ -11,5 +11,11 @@
       "source.organizeImports": true
     }
   },
-  "cSpell.words": ["devsearch", "Stackoverflow", "Udemy", "whitenoise"]
+  "cSpell.words": [
+    "devlist",
+    "devsearch",
+    "Stackoverflow",
+    "Udemy",
+    "whitenoise"
+  ]
 }

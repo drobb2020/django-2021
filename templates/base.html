@@ -23,13 +23,25 @@
     <link rel="stylesheet" href="{% static 'uikit/styles/uikit.css' %}" />
     <!-- Dev Search UI -->
     <link rel="stylesheet" href="{% static 'css/app.css' %}" />
-    <script src="{% static 'js/main.js' %}" defer></script>
+    <!-- <script src="{% static 'js/main.js' %}" defer></script> -->
   </head>
   <body>
     {% include "partials/navbar.html" %}
+
+      {% if messages %}
+        {% for message in messages %}
+          <div id="alert" class="alert alert--{{ message.tags }}">
+            <p class="alert__message">{{ message }}</p>
+            <button id="close" class="alert__close">x</button>
+          </div>
+        {% endfor %}
+      {% endif %}
+
     {% block content %}
 
     {% endblock content %}
     {% include "partials/footer.html" %}
+    <script src="{% static 'uikit/app.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

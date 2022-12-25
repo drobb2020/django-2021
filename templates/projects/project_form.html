@@ -6,10 +6,9 @@
   <div class="content-box">
     <div class="formWrapper">
       <a class="backButton" href="{% url 'projects' %}"
-        ><i class="im im-angle-left"></i
-      ></a>
+        ><i class="fa-light fa-chevron-left"></i></a>
       <br />
-
+      <h2>Add your new project here</h2>
       <form class="form" action="" method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         {% for field in form %}
