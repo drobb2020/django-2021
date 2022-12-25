@@ -2,15 +2,17 @@ import uuid
 
 from django.db import models
 
+from users.models import Profile
+
 
 class Project(models.Model):
+    owner = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True, blank=True)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    featured_image = models.ImageField(
-        blank=True, null=True, default='assets/default.jpg')
+    featured_image = models.ImageField(blank=True, default="assets/default.jpg")
     live_link = models.CharField(max_length=2000, blank=True)
     code_link = models.CharField(max_length=2000, blank=True)
-    tags = models.ManyToManyField('Tag', blank=True)
+    tags = models.ManyToManyField("Tag", blank=True)
     vote_total = models.IntegerField(default=0, null=True, blank=True)
     vote_ratio = models.IntegerField(default=0, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -25,8 +27,8 @@ class Project(models.Model):
 
 class Review(models.Model):
     VOTE_TYPE = (
-        ('up', 'Up Vote'),
-        ('down', 'Down Vote'),
+        ("up", "Up Vote"),
+        ("down", "Down Vote"),
     )
 
     # owner =

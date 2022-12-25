@@ -1,6 +1,6 @@
 # DevSearch
 
-Tempalte for FullStack Django Beginners course.
+Template for FullStack Django Beginners course.
 
 # Features
 * Share Projects
@@ -12,7 +12,7 @@ Tempalte for FullStack Django Beginners course.
 * Basic Djagno Overview
 * Database Design and Models
 * Static Files
-* User Registration & Authenticaiton
+* User Registration & Authentication
 * Search
 * Pagination
 * Building an API with Django REST Framework (DRF)
@@ -24,14 +24,14 @@ Tempalte for FullStack Django Beginners course.
 * Django REST Framework
 
 # Home Page
-<img src="./images/Devsearch Home.jpg">  
+<img src="./images/Devsearch Home.jpg">
 
 # Projects Page
-<img src="./images/DevSearch Projects.jpg">  
+<img src="./images/DevSearch Projects.jpg">
 
 # Profile Page
-<img src="./images/Devsearch Profile.jpg">  
+<img src="./images/Devsearch Profile.jpg">
 
 # User Inbox
-<img src="./images/Devsearch Inbox.jpg">  
+<img src="./images/Devsearch Inbox.jpg">
 

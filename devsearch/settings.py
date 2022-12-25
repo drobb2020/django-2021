@@ -26,6 +26,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     # Applications
     'projects.apps.ProjectsConfig',
+    'users.apps.UsersConfig',
 
     # 3rd-Party libraries
     "django_extensions",
