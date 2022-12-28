@@ -180,7 +180,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@davidrobb2](https://twitter.com/davidrobb2) - drobb2011@gmail.com
+David Robb - [@davidrobb2](https://twitter.com/davidrobb2) - drobb2011@gmail.com
 
 Project Link: [https://github.com/drobb2020/django-2021](https://github.com/drobb2020/django-2021)
 
