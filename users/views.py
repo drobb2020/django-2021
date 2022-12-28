@@ -183,7 +183,7 @@ def createMessage(request, pk):
 
     try:
         sender = request.user.profile
-    except:
+    except Exception:
         sender = None
 
     if request.method == "POST":

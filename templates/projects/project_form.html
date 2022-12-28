@@ -1,23 +1,43 @@
-{% extends "base.html" %}
-
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
 <main class="formPage my-xl">
   <div class="content-box">
     <div class="formWrapper">
-      <a class="backButton" href="{% url 'projects' %}"
-        ><i class="fa-light fa-chevron-left"></i></a>
+      <a class="backButton" href="{% url 'account' %}"
+        ><i class="fa-light fa-chevron-left"></i
+      ></a>
       <br />
       <h2>Add your new project here</h2>
       <form class="form" action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {% for field in form %}
+        {% csrf_token %} {% for field in form %}
         <!-- Input:Text -->
         <div class="form__field">
           <label for="formInput#text">{{ field.label }}: </label>
           {{ field }}
         </div>
         {% endfor %}
+        <div class="form__field">
+          {% for tag in project.tags.all %}
+          <div
+            class="project-tag tag tag-pill tag--main"
+            data-tag="{{ tag.id }}"
+            data-project="{{ project.id }}"
+          >
+            {{ tag.name }} &#215;
+          </div>
+          {% endfor %}
+        </div>
+        <div class="form__field">
+          <label for="formInput#text">Tags (space separated)</label>
+          <textarea
+            name="newtags"
+            class="input"
+            placeholder="Add new tags here..."
+            cols="30"
+            rows="2"
+          ></textarea>
+        </div>
+
         <input
           class="btn btn--sub btn--lg my-md"
           type="submit"

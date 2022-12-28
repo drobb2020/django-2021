@@ -13,7 +13,6 @@ class ProjectForm(ModelForm):
             "description",
             "live_link",
             "code_link",
-            "tags",
         ]
         widgets = {
             "tags": forms.CheckboxSelectMultiple(),

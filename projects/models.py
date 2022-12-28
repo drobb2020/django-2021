@@ -6,10 +6,10 @@ from users.models import Profile
 
 
 class Project(models.Model):
-    owner = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True, blank=True)
+    owner = models.ForeignKey(Profile, on_delete=models.CASCADE, null=True, blank=True)
     title = models.CharField(max_length=200)
     description = models.TextField(blank=True)
-    featured_image = models.ImageField(blank=True, default="assets/default.jpg")
+    featured_image = models.ImageField(blank=True, default="default.jpg")
     live_link = models.CharField(max_length=2000, blank=True)
     code_link = models.CharField(max_length=2000, blank=True)
     tags = models.ManyToManyField("Tag", blank=True)
@@ -26,6 +26,14 @@ class Project(models.Model):
 
     class Meta:
         ordering = ["-vote_ratio", '-vote_total', 'title']
+
+    @property
+    def imageURL(self):
+        try:
+            url = self.featured_image.url
+        except Exception:
+            url = ''
+        return url
 
     @property
     def reviewers(self):

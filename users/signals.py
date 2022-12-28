@@ -43,7 +43,7 @@ def deleteUser(sender, instance, **kwargs):
     try:
         user = instance.user
         user.delete()
-    except:
+    except user.DoesNotExist:
         pass
 
 
