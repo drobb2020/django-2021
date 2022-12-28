@@ -140,7 +140,7 @@ _Below is an example of how you can instruct your audience on installing and set
 
 This django application is designed as place where developers can get together, share ideas, and showcase their work. It includes the ability of members to message each other inside the application.
 
-_For more examples, please refer to the [Documentation](https://github.com/drobb2020/django-2021/issues)_
+_For more examples, please refer to the [Documentation](https://github.com/drobb2020/django-2021/wiki)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
