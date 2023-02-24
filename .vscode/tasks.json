@@ -1,0 +1,21 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Make Migrations",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["manage.py", "makemigrations"],
+      "isBackground": true,
+      "options": { "cwd": "${workspaceFolder}" },
+    },
+    {
+      "label": "Migrate",
+      "type": "shell",
+      "command": "${command:python.interpreterPath}",
+      "args": ["manage.py", "migrate"],
+      "isBackground": true,
+      "options": { "cwd": "${workspaceFolder}" }
+    }
+  ]
+}
