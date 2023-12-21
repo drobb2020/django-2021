@@ -113,8 +113,6 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
-
 1. Clone the repo
 
    ```sh
@@ -180,9 +178,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-David Robb - [@davidrobb2](https://twitter.com/davidrobb2) - drobb2011@gmail.com
+drobb2011@gmail.com
 
 Project Link: [https://github.com/drobb2020/django-2021](https://github.com/drobb2020/django-2021)
+Sorry this site is not live at this time.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

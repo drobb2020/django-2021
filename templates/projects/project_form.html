@@ -9,7 +9,8 @@
       <br />
       <h2>Add your new project here</h2>
       <form class="form" action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %} {% for field in form %}
+        {% csrf_token %}
+        {% for field in form %}
         <!-- Input:Text -->
         <div class="form__field">
           <label for="formInput#text">{{ field.label }}: </label>

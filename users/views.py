@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 from django.shortcuts import redirect, render
 
 from .forms import CustomUserCreationForm, MessageForm, ProfileForm, SkillForm
-from .models import Message, Profile
+from .models import Profile
 from .utils import paginateProfiles, searchProfiles
 
 

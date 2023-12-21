@@ -38,7 +38,7 @@ class Profile(models.Model):
         try:
             url = self.profile_image.url
         except Exception:
-            url = ''
+            url = ""
         return url
 
 

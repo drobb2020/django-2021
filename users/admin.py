@@ -1,7 +1,57 @@
+# -*- coding: utf-8 -*-
 from django.contrib import admin
 
-from .models import Message, Profile, Skill
+from .models import Profile, Skill, Message
 
-admin.site.register(Message)
-admin.site.register(Profile)
-admin.site.register(Skill)
+
+@admin.register(Profile)
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'email',
+        'username',
+        'location',
+        'short_intro',
+        'created_at',
+    )
+    list_filter = ('user', 'created_at', 'updated_at')
+    search_fields = ('name',)
+    date_hierarchy = 'created_at'
+
+
+@admin.register(Skill)
+class SkillAdmin(admin.ModelAdmin):
+    list_display = (
+        'owner',
+        'name',
+        'description',
+        'id',
+    )
+    list_filter = ('owner', 'created_at', 'updated_at')
+    search_fields = ('name',)
+    date_hierarchy = 'created_at'
+
+
+@admin.register(Message)
+class MessageAdmin(admin.ModelAdmin):
+    list_display = (
+        'sender',
+        'recipient',
+        'name',
+        'email',
+        'subject',
+        'body',
+        'is_read',
+        'created_at',
+        'updated_at',
+        'id',
+    )
+    list_filter = (
+        'sender',
+        'recipient',
+        'is_read',
+        'created_at',
+        'updated_at',
+    )
+    search_fields = ('name',)
+    date_hierarchy = 'created_at'
