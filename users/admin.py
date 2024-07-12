@@ -25,7 +25,6 @@ class SkillAdmin(admin.ModelAdmin):
         'owner',
         'name',
         'description',
-        'id',
     )
     list_filter = ('owner', 'created_at', 'updated_at')
     search_fields = ('name',)
@@ -40,11 +39,9 @@ class MessageAdmin(admin.ModelAdmin):
         'name',
         'email',
         'subject',
-        'body',
         'is_read',
         'created_at',
         'updated_at',
-        'id',
     )
     list_filter = (
         'sender',
