@@ -31,3 +31,4 @@ sqlparse==0.5.1
 tomli==2.0.1
 uritemplate==4.1.1
 whitenoise==6.7.0
+zipp>=3.19.1 # not directly required, pinned by Snyk to avoid a vulnerability
